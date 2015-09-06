@@ -27,11 +27,10 @@ sigma = zeros(1, size(X, 2));
 %       
 
 
-
-
-
-
-
+mu = mean(X);
+sigma = std(X);
+m = size(X,1);
+X_norm = (X-ones(m,1)*mu)./(ones(m,1)*sigma);
 
 
 % ============================================================
