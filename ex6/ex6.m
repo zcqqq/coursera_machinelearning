@@ -145,6 +145,8 @@ load('ex6data3.mat');
 model= svmTrain(X, y, C, @(x1, x2) gaussianKernel(x1, x2, sigma));
 visualizeBoundary(X, y, model);
 
+fprintf('C:%f\n', C);
+fprintf('sigma:%f\n', sigma);
 fprintf('Program paused. Press enter to continue.\n');
 pause;
 
