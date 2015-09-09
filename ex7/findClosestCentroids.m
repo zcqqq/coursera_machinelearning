@@ -22,9 +22,16 @@ idx = zeros(size(X,1), 1);
 %
 
 
-
-
-
+for i = 1:size(X,1),
+	Jmin = 0;
+	for k = 1:K,
+		J = sum((X(i,:)-centroids(k,:)).^2);
+		if Jmin == 0 || J < Jmin,
+			Jmin = J;
+			idx(i) = k;
+		end
+	end
+end
 
 
 % =============================================================
